@@ -40,7 +40,8 @@
 #  2014-09-01,A,3,100.4
 #
 #  >>> Escriba su codigo a partir de este punto <<<
-# cat data.csv > datal.csv
+#
+cat data.csv > datal.csv
 sed 's/\([0-9][0-9]\)\/\([0-9][0-9]\)\/\([0-9][0-9]\)/20\3-\2-\1/g' datal.csv > datal1.csv
 sed 's/\([0-9]\)\/\([0-9]\)\/\([0-9][0-9][0-9][0-9]\);/\3-0\2-0\1;/g' datal1.csv > datal2.csv
 cat datal2.csv |tr '[:lower:]' '[:upper:]'| tr ',' '.'| tr ';' ','>datal3.csv
